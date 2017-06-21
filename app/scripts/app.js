@@ -20,9 +20,6 @@ angular
   .config(function ($routeProvider, $locationProvider) {
     $locationProvider.hashPrefix('');
     $routeProvider
-      .when('', {
-        redirectTo: '/',
-      })
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
@@ -32,13 +29,5 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
-      })
-      .when('/new', {
-        templateUrl: 'views/ng2.html',
-        controller: 'Ng2Ctrl',
-        controllerAs: 'ng2'
-      })
-      .otherwise({
-        template: 'Not Found'
       });
   });
